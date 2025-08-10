@@ -1,0 +1,951 @@
+fileFormatVersion: 2
+guid: 87fa7db9a50b873408049b976e86c67d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1797773971897799872
+    second: Dandara - Sprite Sheet_0
+  - first:
+      213: -120588633619848452
+    second: Dandara - Sprite Sheet_1
+  - first:
+      213: 62360643158957891
+    second: Dandara - Sprite Sheet_2
+  - first:
+      213: -1992904577026329630
+    second: Dandara - Sprite Sheet_3
+  - first:
+      213: -1322758249212882665
+    second: Dandara - Sprite Sheet_4
+  - first:
+      213: 7778960818698149330
+    second: Dandara - Sprite Sheet_5
+  - first:
+      213: -1449739749104868325
+    second: Dandara - Sprite Sheet_6
+  - first:
+      213: -37987150426296741
+    second: Dandara - Sprite Sheet_7
+  - first:
+      213: 4173204224738334092
+    second: Dandara - Sprite Sheet_8
+  - first:
+      213: 7230613303217503117
+    second: Dandara - Sprite Sheet_9
+  - first:
+      213: 6048282836831438831
+    second: Dandara - Sprite Sheet_10
+  - first:
+      213: 8988838160719326031
+    second: Dandara - Sprite Sheet_11
+  - first:
+      213: -5794140476693775241
+    second: Dandara - Sprite Sheet_12
+  - first:
+      213: -1407022129483707176
+    second: Dandara - Sprite Sheet_13
+  - first:
+      213: -7823457757080547206
+    second: Dandara - Sprite Sheet_14
+  - first:
+      213: -7932463925293331245
+    second: Dandara - Sprite Sheet_15
+  - first:
+      213: -7571995258577939622
+    second: Dandara - Sprite Sheet_16
+  - first:
+      213: 2733159518324730033
+    second: Dandara - Sprite Sheet_17
+  - first:
+      213: -2105360582683004589
+    second: Dandara - Sprite Sheet_18
+  - first:
+      213: 8673712830299561006
+    second: Dandara - Sprite Sheet_19
+  - first:
+      213: 8469198745129301151
+    second: Dandara - Sprite Sheet_20
+  - first:
+      213: -618291222604998982
+    second: Dandara - Sprite Sheet_21
+  - first:
+      213: 7943998607364834422
+    second: Dandara - Sprite Sheet_22
+  - first:
+      213: -1212150732242093036
+    second: Dandara - Sprite Sheet_23
+  - first:
+      213: 1414244027891138737
+    second: Dandara - Sprite Sheet_24
+  - first:
+      213: 4165073400616879947
+    second: Dandara - Sprite Sheet_25
+  - first:
+      213: -8782364659899801425
+    second: Dandara - Sprite Sheet_26
+  - first:
+      213: -3512529134574200518
+    second: Dandara - Sprite Sheet_27
+  - first:
+      213: 5645801215615305520
+    second: Dandara - Sprite Sheet_28
+  - first:
+      213: -5873627668979632939
+    second: Dandara - Sprite Sheet_29
+  - first:
+      213: -7291351911884489507
+    second: Dandara - Sprite Sheet_30
+  - first:
+      213: -6950327962842071939
+    second: Dandara - Sprite Sheet_31
+  - first:
+      213: -7691084026525796087
+    second: Dandara - Sprite Sheet_32
+  - first:
+      213: -4442556355752913123
+    second: Dandara - Sprite Sheet_33
+  - first:
+      213: -4064487844918735471
+    second: Dandara - Sprite Sheet_34
+  - first:
+      213: 4646068119091573544
+    second: Dandara - Sprite Sheet_35
+  - first:
+      213: 6910227091478314354
+    second: Dandara - Sprite Sheet_36
+  - first:
+      213: 4480287095136615591
+    second: Dandara - Sprite Sheet_37
+  - first:
+      213: -5726738438136242778
+    second: Dandara - Sprite Sheet_38
+  - first:
+      213: 8015273735356326256
+    second: Dandara - Sprite Sheet_39
+  - first:
+      213: -439420965419086499
+    second: Dandara - Sprite Sheet_40
+  - first:
+      213: 4562717874143338791
+    second: Dandara - Sprite Sheet_41
+  - first:
+      213: 8596080317906384737
+    second: Dandara - Sprite Sheet_42
+  - first:
+      213: 2525234562906838913
+    second: Dandara - Sprite Sheet_43
+  - first:
+      213: 8900999489638904426
+    second: Dandara - Sprite Sheet_44
+  - first:
+      213: 5151454831987373266
+    second: Dandara - Sprite Sheet_45
+  - first:
+      213: -9178449664894700882
+    second: Dandara - Sprite Sheet_46
+  - first:
+      213: -6097840745920163086
+    second: Dandara - Sprite Sheet_47
+  - first:
+      213: 1651571164176873130
+    second: Dandara - Sprite Sheet_48
+  - first:
+      213: 293502893439721491
+    second: Dandara - Sprite Sheet_49
+  - first:
+      213: -6475600584815532007
+    second: Dandara - Sprite Sheet_50
+  - first:
+      213: 4078188183609456925
+    second: Dandara - Sprite Sheet_51
+  - first:
+      213: -7812767862725250687
+    second: Dandara - Sprite Sheet_52
+  - first:
+      213: -9026670926181918166
+    second: Dandara - Sprite Sheet_53
+  - first:
+      213: -2643161085802668617
+    second: Dandara - Sprite Sheet_54
+  - first:
+      213: 5862555183338188322
+    second: Dandara - Sprite Sheet_55
+  - first:
+      213: -8043292665634469678
+    second: Dandara - Sprite Sheet_56
+  - first:
+      213: 7366462533412969763
+    second: Dandara - Sprite Sheet_57
+  - first:
+      213: -5264086440646497058
+    second: Dandara - Sprite Sheet_58
+  - first:
+      213: -8071036917959523677
+    second: Dandara - Sprite Sheet_59
+  - first:
+      213: 6065425671789376681
+    second: Dandara - Sprite Sheet_60
+  - first:
+      213: 5893918651507730262
+    second: Dandara - Sprite Sheet_61
+  - first:
+      213: -4335222474987373845
+    second: Dandara - Sprite Sheet_62
+  - first:
+      213: 797719391776905940
+    second: Dandara - Sprite Sheet_63
+  - first:
+      213: -3203829740323638123
+    second: Dandara - Sprite Sheet_64
+  - first:
+      213: -2354735409416981650
+    second: Dandara - Sprite Sheet_65
+  - first:
+      213: -7122921373567255629
+    second: Dandara - Sprite Sheet_66
+  - first:
+      213: 5160388490200741592
+    second: Dandara - Sprite Sheet_67
+  - first:
+      213: -9170150106924484076
+    second: Dandara - Sprite Sheet_68
+  - first:
+      213: 1401129714279717462
+    second: Dandara - Sprite Sheet_69
+  - first:
+      213: 854697951249656019
+    second: Dandara - Sprite Sheet_70
+  - first:
+      213: -7603002585691141753
+    second: Dandara - Sprite Sheet_71
+  - first:
+      213: -1547983371695738462
+    second: Dandara - Sprite Sheet_72
+  - first:
+      213: -6682537822596519506
+    second: Dandara - Sprite Sheet_73
+  - first:
+      213: 5500587609355876918
+    second: Dandara - Sprite Sheet_74
+  - first:
+      213: 8967084679714257670
+    second: Dandara - Sprite Sheet_75
+  - first:
+      213: 3279130272651678124
+    second: Dandara - Sprite Sheet_76
+  - first:
+      213: 4209382348629705217
+    second: Dandara - Sprite Sheet_77
+  - first:
+      213: 2891391215914849786
+    second: Dandara - Sprite Sheet_78
+  - first:
+      213: 7535922325541059885
+    second: Dandara - Sprite Sheet_79
+  - first:
+      213: -1973517560503908533
+    second: Dandara - Sprite Sheet_80
+  - first:
+      213: 1280062116304009703
+    second: Dandara - Sprite Sheet_81
+  - first:
+      213: -8925668545453989221
+    second: Dandara - Sprite Sheet_82
+  - first:
+      213: 2896544135781238711
+    second: Dandara - Sprite Sheet_83
+  - first:
+      213: -6517767048634484564
+    second: Dandara - Sprite Sheet_84
+  - first:
+      213: 2644277244217265319
+    second: Dandara - Sprite Sheet_85
+  - first:
+      213: 2470249244190740063
+    second: Dandara - Sprite Sheet_86
+  - first:
+      213: -8244002155256579622
+    second: Dandara - Sprite Sheet_87
+  - first:
+      213: -3579617166817979188
+    second: Dandara - Sprite Sheet_88
+  - first:
+      213: 1110974771561149743
+    second: Dandara - Sprite Sheet_89
+  - first:
+      213: -8253352781150351127
+    second: Dandara - Sprite Sheet_90
+  - first:
+      213: 4478083366400308454
+    second: Dandara - Sprite Sheet_91
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dandara - Sprite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 3135
+        width: 455
+        height: 1106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77c74f36fe3179fa0800000000000000
+      internalID: -5794140476693775241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dandara - Sprite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 3135
+        width: 468
+        height: 1096
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dc8205f3d0497ce0800000000000000
+      internalID: -1407022129483707176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dandara - Sprite Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 2968
+        y: 3135
+        width: 494
+        height: 1086
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7090f1de9e7d6390800000000000000
+      internalID: -7823457757080547206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dandara - Sprite Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 4168
+        y: 3135
+        width: 468
+        height: 1096
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dc4a43861a3ae190800000000000000
+      internalID: -7932463925293331245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dandara - Sprite Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 5368
+        y: 3135
+        width: 455
+        height: 1106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5315833e6edae690800000000000000
+      internalID: -7571995258577939622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dandara - Sprite Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 6568
+        y: 3135
+        width: 468
+        height: 1096
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b8293cd9122ee520800000000000000
+      internalID: 2733159518324730033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dandara - Sprite Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 7768
+        y: 3135
+        width: 494
+        height: 1086
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 351f11964b148c2e0800000000000000
+      internalID: -2105360582683004589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dandara - Sprite Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 8968
+        y: 3135
+        width: 468
+        height: 1096
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2cd0c52dd73f5870800000000000000
+      internalID: 8673712830299561006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dandara - Sprite Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 10602
+        y: 3135
+        width: 455
+        height: 1106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f94bd9f0363a88570800000000000000
+      internalID: 8469198745129301151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dandara - Sprite Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 11802
+        y: 3135
+        width: 455
+        height: 1106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab613eca8636b67f0800000000000000
+      internalID: -618291222604998982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dandara - Sprite Sheet_62
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 714
+        width: 455
+        height: 1106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bea7614c02236d3c0800000000000000
+      internalID: -4335222474987373845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dandara - Sprite Sheet_63
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 714
+        width: 468
+        height: 1096
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4da9d417f81121b00800000000000000
+      internalID: 797719391776905940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dandara - Sprite Sheet_64
+      rect:
+        serializedVersion: 2
+        x: 2968
+        y: 714
+        width: 494
+        height: 1086
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5947d2763d5b983d0800000000000000
+      internalID: -3203829740323638123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dandara - Sprite Sheet_65
+      rect:
+        serializedVersion: 2
+        x: 4168
+        y: 714
+        width: 468
+        height: 1096
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e63baadfe9c425fd0800000000000000
+      internalID: -2354735409416981650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dandara - Sprite Sheet_66
+      rect:
+        serializedVersion: 2
+        x: 5368
+        y: 714
+        width: 455
+        height: 1106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bb7c75efbc462d90800000000000000
+      internalID: -7122921373567255629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dandara - Sprite Sheet_67
+      rect:
+        serializedVersion: 2
+        x: 6568
+        y: 714
+        width: 468
+        height: 1096
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d6fd6dadf16d9740800000000000000
+      internalID: 5160388490200741592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dandara - Sprite Sheet_68
+      rect:
+        serializedVersion: 2
+        x: 7768
+        y: 714
+        width: 494
+        height: 1086
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41a71c330151db080800000000000000
+      internalID: -9170150106924484076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dandara - Sprite Sheet_69
+      rect:
+        serializedVersion: 2
+        x: 8968
+        y: 714
+        width: 468
+        height: 1096
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65a13e73d00d17310800000000000000
+      internalID: 1401129714279717462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dandara - Sprite Sheet_70
+      rect:
+        serializedVersion: 2
+        x: 10602
+        y: 714
+        width: 657
+        height: 1106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d86d7e124f7cdb00800000000000000
+      internalID: 854697951249656019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dandara - Sprite Sheet_71
+      rect:
+        serializedVersion: 2
+        x: 11802
+        y: 714
+        width: 657
+        height: 1106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 789c0854e65bc7690800000000000000
+      internalID: -7603002585691141753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 735f4960996536c4d9d9664907c39f48
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Dandara - Sprite Sheet_0: -1797773971897799872
+      Dandara - Sprite Sheet_1: -120588633619848452
+      Dandara - Sprite Sheet_10: 6048282836831438831
+      Dandara - Sprite Sheet_11: 8988838160719326031
+      Dandara - Sprite Sheet_12: -5794140476693775241
+      Dandara - Sprite Sheet_13: -1407022129483707176
+      Dandara - Sprite Sheet_14: -7823457757080547206
+      Dandara - Sprite Sheet_15: -7932463925293331245
+      Dandara - Sprite Sheet_16: -7571995258577939622
+      Dandara - Sprite Sheet_17: 2733159518324730033
+      Dandara - Sprite Sheet_18: -2105360582683004589
+      Dandara - Sprite Sheet_19: 8673712830299561006
+      Dandara - Sprite Sheet_2: 62360643158957891
+      Dandara - Sprite Sheet_20: 8469198745129301151
+      Dandara - Sprite Sheet_21: -618291222604998982
+      Dandara - Sprite Sheet_22: 7943998607364834422
+      Dandara - Sprite Sheet_23: -1212150732242093036
+      Dandara - Sprite Sheet_24: 1414244027891138737
+      Dandara - Sprite Sheet_25: 4165073400616879947
+      Dandara - Sprite Sheet_26: -8782364659899801425
+      Dandara - Sprite Sheet_27: -3512529134574200518
+      Dandara - Sprite Sheet_28: 5645801215615305520
+      Dandara - Sprite Sheet_29: -5873627668979632939
+      Dandara - Sprite Sheet_3: -1992904577026329630
+      Dandara - Sprite Sheet_30: -7291351911884489507
+      Dandara - Sprite Sheet_31: -6950327962842071939
+      Dandara - Sprite Sheet_32: -7691084026525796087
+      Dandara - Sprite Sheet_33: -4442556355752913123
+      Dandara - Sprite Sheet_34: -4064487844918735471
+      Dandara - Sprite Sheet_35: 4646068119091573544
+      Dandara - Sprite Sheet_36: 6910227091478314354
+      Dandara - Sprite Sheet_37: 4480287095136615591
+      Dandara - Sprite Sheet_38: -5726738438136242778
+      Dandara - Sprite Sheet_39: 8015273735356326256
+      Dandara - Sprite Sheet_4: -1322758249212882665
+      Dandara - Sprite Sheet_40: -439420965419086499
+      Dandara - Sprite Sheet_41: 4562717874143338791
+      Dandara - Sprite Sheet_42: 8596080317906384737
+      Dandara - Sprite Sheet_43: 2525234562906838913
+      Dandara - Sprite Sheet_44: 8900999489638904426
+      Dandara - Sprite Sheet_45: 5151454831987373266
+      Dandara - Sprite Sheet_46: -9178449664894700882
+      Dandara - Sprite Sheet_47: -6097840745920163086
+      Dandara - Sprite Sheet_48: 1651571164176873130
+      Dandara - Sprite Sheet_49: 293502893439721491
+      Dandara - Sprite Sheet_5: 7778960818698149330
+      Dandara - Sprite Sheet_50: -6475600584815532007
+      Dandara - Sprite Sheet_51: 4078188183609456925
+      Dandara - Sprite Sheet_52: -7812767862725250687
+      Dandara - Sprite Sheet_53: -9026670926181918166
+      Dandara - Sprite Sheet_54: -2643161085802668617
+      Dandara - Sprite Sheet_55: 5862555183338188322
+      Dandara - Sprite Sheet_56: -8043292665634469678
+      Dandara - Sprite Sheet_57: 7366462533412969763
+      Dandara - Sprite Sheet_58: -5264086440646497058
+      Dandara - Sprite Sheet_59: -8071036917959523677
+      Dandara - Sprite Sheet_6: -1449739749104868325
+      Dandara - Sprite Sheet_60: 6065425671789376681
+      Dandara - Sprite Sheet_61: 5893918651507730262
+      Dandara - Sprite Sheet_62: -4335222474987373845
+      Dandara - Sprite Sheet_63: 797719391776905940
+      Dandara - Sprite Sheet_64: -3203829740323638123
+      Dandara - Sprite Sheet_65: -2354735409416981650
+      Dandara - Sprite Sheet_66: -7122921373567255629
+      Dandara - Sprite Sheet_67: 5160388490200741592
+      Dandara - Sprite Sheet_68: -9170150106924484076
+      Dandara - Sprite Sheet_69: 1401129714279717462
+      Dandara - Sprite Sheet_7: -37987150426296741
+      Dandara - Sprite Sheet_70: 854697951249656019
+      Dandara - Sprite Sheet_71: -7603002585691141753
+      Dandara - Sprite Sheet_72: -1547983371695738462
+      Dandara - Sprite Sheet_73: -6682537822596519506
+      Dandara - Sprite Sheet_74: 5500587609355876918
+      Dandara - Sprite Sheet_75: 8967084679714257670
+      Dandara - Sprite Sheet_76: 3279130272651678124
+      Dandara - Sprite Sheet_77: 4209382348629705217
+      Dandara - Sprite Sheet_78: 2891391215914849786
+      Dandara - Sprite Sheet_79: 7535922325541059885
+      Dandara - Sprite Sheet_8: 4173204224738334092
+      Dandara - Sprite Sheet_80: -1973517560503908533
+      Dandara - Sprite Sheet_81: 1280062116304009703
+      Dandara - Sprite Sheet_82: -8925668545453989221
+      Dandara - Sprite Sheet_83: 2896544135781238711
+      Dandara - Sprite Sheet_84: -6517767048634484564
+      Dandara - Sprite Sheet_85: 2644277244217265319
+      Dandara - Sprite Sheet_86: 2470249244190740063
+      Dandara - Sprite Sheet_87: -8244002155256579622
+      Dandara - Sprite Sheet_88: -3579617166817979188
+      Dandara - Sprite Sheet_89: 1110974771561149743
+      Dandara - Sprite Sheet_9: 7230613303217503117
+      Dandara - Sprite Sheet_90: -8253352781150351127
+      Dandara - Sprite Sheet_91: 4478083366400308454
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

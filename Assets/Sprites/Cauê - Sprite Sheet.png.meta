@@ -1,0 +1,892 @@
+fileFormatVersion: 2
+guid: 50eaa3c90c9aa35469c563f60b95f028
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3405756779931696094
+    second: "Cau\xEA - Sprite Sheet_0"
+  - first:
+      213: 8171486224826807429
+    second: "Cau\xEA - Sprite Sheet_1"
+  - first:
+      213: 4669169029581855546
+    second: "Cau\xEA - Sprite Sheet_2"
+  - first:
+      213: 1482232369098555161
+    second: "Cau\xEA - Sprite Sheet_3"
+  - first:
+      213: -4424805881212889957
+    second: "Cau\xEA - Sprite Sheet_4"
+  - first:
+      213: -4158106841710090136
+    second: "Cau\xEA - Sprite Sheet_5"
+  - first:
+      213: -7332806446440330837
+    second: "Cau\xEA - Sprite Sheet_6"
+  - first:
+      213: -519871118006169235
+    second: "Cau\xEA - Sprite Sheet_7"
+  - first:
+      213: -4739372644049317705
+    second: "Cau\xEA - Sprite Sheet_8"
+  - first:
+      213: 609030296036165740
+    second: "Cau\xEA - Sprite Sheet_9"
+  - first:
+      213: 2608155806557992230
+    second: "Cau\xEA - Sprite Sheet_10"
+  - first:
+      213: 6315449041262725988
+    second: "Cau\xEA - Sprite Sheet_11"
+  - first:
+      213: 1136040308344620903
+    second: "Cau\xEA - Sprite Sheet_12"
+  - first:
+      213: -4368124854713943323
+    second: "Cau\xEA - Sprite Sheet_13"
+  - first:
+      213: 2577377529677511581
+    second: "Cau\xEA - Sprite Sheet_14"
+  - first:
+      213: 6778605383248997449
+    second: "Cau\xEA - Sprite Sheet_15"
+  - first:
+      213: -362227119175174965
+    second: "Cau\xEA - Sprite Sheet_16"
+  - first:
+      213: -2537452656141599626
+    second: "Cau\xEA - Sprite Sheet_17"
+  - first:
+      213: -1643913024798134368
+    second: "Cau\xEA - Sprite Sheet_18"
+  - first:
+      213: 3616526661558635557
+    second: "Cau\xEA - Sprite Sheet_19"
+  - first:
+      213: -6408633238447114201
+    second: "Cau\xEA - Sprite Sheet_20"
+  - first:
+      213: 513125735537679356
+    second: "Cau\xEA - Sprite Sheet_21"
+  - first:
+      213: -555448617256638116
+    second: "Cau\xEA - Sprite Sheet_22"
+  - first:
+      213: -7555982807038130236
+    second: "Cau\xEA - Sprite Sheet_23"
+  - first:
+      213: -2437458859217976466
+    second: "Cau\xEA - Sprite Sheet_24"
+  - first:
+      213: 1616693382235298803
+    second: "Cau\xEA - Sprite Sheet_25"
+  - first:
+      213: -202730881703891069
+    second: "Cau\xEA - Sprite Sheet_26"
+  - first:
+      213: 702054150078571865
+    second: "Cau\xEA - Sprite Sheet_27"
+  - first:
+      213: -5437111690987601612
+    second: "Cau\xEA - Sprite Sheet_28"
+  - first:
+      213: 750819132108699292
+    second: "Cau\xEA - Sprite Sheet_29"
+  - first:
+      213: 7677793481871070780
+    second: "Cau\xEA - Sprite Sheet_30"
+  - first:
+      213: -1615394461699089774
+    second: "Cau\xEA - Sprite Sheet_31"
+  - first:
+      213: 7279857022117018400
+    second: "Cau\xEA - Sprite Sheet_32"
+  - first:
+      213: -6053210232399505026
+    second: "Cau\xEA - Sprite Sheet_33"
+  - first:
+      213: 2610015314159976630
+    second: "Cau\xEA - Sprite Sheet_34"
+  - first:
+      213: -6158821358706436769
+    second: "Cau\xEA - Sprite Sheet_35"
+  - first:
+      213: -6884594513316271738
+    second: "Cau\xEA - Sprite Sheet_36"
+  - first:
+      213: 4778806521430417618
+    second: "Cau\xEA - Sprite Sheet_37"
+  - first:
+      213: -8018495489096712787
+    second: "Cau\xEA - Sprite Sheet_38"
+  - first:
+      213: 5396830686879612455
+    second: "Cau\xEA - Sprite Sheet_39"
+  - first:
+      213: -3751880660896202260
+    second: "Cau\xEA - Sprite Sheet_40"
+  - first:
+      213: -7017862709264055817
+    second: "Cau\xEA - Sprite Sheet_41"
+  - first:
+      213: -6386759622798205362
+    second: "Cau\xEA - Sprite Sheet_42"
+  - first:
+      213: -8723748110258865997
+    second: "Cau\xEA - Sprite Sheet_43"
+  - first:
+      213: -4942846858842064169
+    second: "Cau\xEA - Sprite Sheet_44"
+  - first:
+      213: 4565324979743284456
+    second: "Cau\xEA - Sprite Sheet_45"
+  - first:
+      213: 5084149851584214191
+    second: "Cau\xEA - Sprite Sheet_46"
+  - first:
+      213: 3545235857518203892
+    second: "Cau\xEA - Sprite Sheet_47"
+  - first:
+      213: -4321186341201538112
+    second: "Cau\xEA - Sprite Sheet_48"
+  - first:
+      213: -4448146873895882379
+    second: "Cau\xEA - Sprite Sheet_49"
+  - first:
+      213: 1045538026900680771
+    second: "Cau\xEA - Sprite Sheet_50"
+  - first:
+      213: -808726419732076206
+    second: "Cau\xEA - Sprite Sheet_51"
+  - first:
+      213: -5401750599093064063
+    second: "Cau\xEA - Sprite Sheet_52"
+  - first:
+      213: -8099592388467491138
+    second: "Cau\xEA - Sprite Sheet_53"
+  - first:
+      213: 8326337880092363238
+    second: "Cau\xEA - Sprite Sheet_54"
+  - first:
+      213: -142318414442589697
+    second: "Cau\xEA - Sprite Sheet_55"
+  - first:
+      213: 7787701630861930365
+    second: "Cau\xEA - Sprite Sheet_56"
+  - first:
+      213: -541857572989393264
+    second: "Cau\xEA - Sprite Sheet_57"
+  - first:
+      213: 3627786431443512490
+    second: "Cau\xEA - Sprite Sheet_58"
+  - first:
+      213: -4427444176038086980
+    second: "Cau\xEA - Sprite Sheet_59"
+  - first:
+      213: 5098496688204532613
+    second: "Cau\xEA - Sprite Sheet_60"
+  - first:
+      213: 2836048158728215558
+    second: "Cau\xEA - Sprite Sheet_61"
+  - first:
+      213: -9129290129300824090
+    second: "Cau\xEA - Sprite Sheet_62"
+  - first:
+      213: -247343408165909556
+    second: "Cau\xEA - Sprite Sheet_63"
+  - first:
+      213: 7056209676803802061
+    second: "Cau\xEA - Sprite Sheet_64"
+  - first:
+      213: 2973656010531274271
+    second: "Cau\xEA - Sprite Sheet_65"
+  - first:
+      213: 3513177635246636829
+    second: "Cau\xEA - Sprite Sheet_66"
+  - first:
+      213: -1697177642782242079
+    second: "Cau\xEA - Sprite Sheet_67"
+  - first:
+      213: -1321068342997257524
+    second: "Cau\xEA - Sprite Sheet_68"
+  - first:
+      213: -5584102416253403994
+    second: "Cau\xEA - Sprite Sheet_69"
+  - first:
+      213: 5977048443525461490
+    second: "Cau\xEA - Sprite Sheet_70"
+  - first:
+      213: 9072594500324632488
+    second: "Cau\xEA - Sprite Sheet_71"
+  - first:
+      213: 8893898874515803278
+    second: "Cau\xEA - Sprite Sheet_72"
+  - first:
+      213: -172841245374897952
+    second: "Cau\xEA - Sprite Sheet_73"
+  - first:
+      213: -982478352696078216
+    second: "Cau\xEA - Sprite Sheet_74"
+  - first:
+      213: 8024384728778396361
+    second: "Cau\xEA - Sprite Sheet_75"
+  - first:
+      213: -6236873589973281384
+    second: "Cau\xEA - Sprite Sheet_76"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Cau\xEA - Sprite Sheet_4"
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 3080
+        width: 359
+        height: 825
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b941f32ae7ee792c0800000000000000
+      internalID: -4424805881212889957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cau\xEA - Sprite Sheet_5"
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 3080
+        width: 359
+        height: 813
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 868afb9abdf6b46c0800000000000000
+      internalID: -4158106841710090136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cau\xEA - Sprite Sheet_6"
+      rect:
+        serializedVersion: 2
+        x: 2812
+        y: 3080
+        width: 359
+        height: 801
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba9ca394363ac3a90800000000000000
+      internalID: -7332806446440330837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cau\xEA - Sprite Sheet_7"
+      rect:
+        serializedVersion: 2
+        x: 3812
+        y: 3080
+        width: 359
+        height: 813
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d61d14af8fb09c8f0800000000000000
+      internalID: -519871118006169235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cau\xEA - Sprite Sheet_8"
+      rect:
+        serializedVersion: 2
+        x: 4812
+        y: 3080
+        width: 359
+        height: 825
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b09c35c0bd5a3eb0800000000000000
+      internalID: -4739372644049317705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cau\xEA - Sprite Sheet_9"
+      rect:
+        serializedVersion: 2
+        x: 5812
+        y: 3080
+        width: 359
+        height: 813
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c68cfa4d3d5b37800800000000000000
+      internalID: 609030296036165740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cau\xEA - Sprite Sheet_10"
+      rect:
+        serializedVersion: 2
+        x: 6812
+        y: 3080
+        width: 359
+        height: 801
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 625f2c033e7023420800000000000000
+      internalID: 2608155806557992230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cau\xEA - Sprite Sheet_11"
+      rect:
+        serializedVersion: 2
+        x: 7812
+        y: 3080
+        width: 359
+        height: 813
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46bcb8d317bf4a750800000000000000
+      internalID: 6315449041262725988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cau\xEA - Sprite Sheet_12"
+      rect:
+        serializedVersion: 2
+        x: 8812
+        y: 3080
+        width: 359
+        height: 825
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 767086534a604cf00800000000000000
+      internalID: 1136040308344620903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cau\xEA - Sprite Sheet_13"
+      rect:
+        serializedVersion: 2
+        x: 9812
+        y: 3080
+        width: 359
+        height: 813
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ea7834869d4163c0800000000000000
+      internalID: -4368124854713943323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cau\xEA - Sprite Sheet_14"
+      rect:
+        serializedVersion: 2
+        x: 10812
+        y: 3080
+        width: 359
+        height: 801
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9b708c253fa4c320800000000000000
+      internalID: 2577377529677511581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cau\xEA - Sprite Sheet_15"
+      rect:
+        serializedVersion: 2
+        x: 11812
+        y: 3080
+        width: 359
+        height: 813
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94c6b157ea1721e50800000000000000
+      internalID: 6778605383248997449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cau\xEA - Sprite Sheet_53"
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 963
+        width: 380
+        height: 813
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebeffebd2a7789f80800000000000000
+      internalID: -8099592388467491138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cau\xEA - Sprite Sheet_54"
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 967
+        width: 464
+        height: 813
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e9c8c6ef281d8370800000000000000
+      internalID: 8326337880092363238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cau\xEA - Sprite Sheet_55"
+      rect:
+        serializedVersion: 2
+        x: 2759
+        y: 972
+        width: 426
+        height: 813
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff11726f722660ef0800000000000000
+      internalID: -142318414442589697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cau\xEA - Sprite Sheet_56"
+      rect:
+        serializedVersion: 2
+        x: 3680
+        y: 973
+        width: 533
+        height: 805
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7f614c4f59731c60800000000000000
+      internalID: 7787701630861930365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cau\xEA - Sprite Sheet_57"
+      rect:
+        serializedVersion: 2
+        x: 5770
+        y: 936
+        width: 413
+        height: 879
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 096ac13886fea78f0800000000000000
+      internalID: -541857572989393264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cau\xEA - Sprite Sheet_58"
+      rect:
+        serializedVersion: 2
+        x: 6742
+        y: 997
+        width: 433
+        height: 818
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aac2c2fd98c785230800000000000000
+      internalID: 3627786431443512490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cau\xEA - Sprite Sheet_59"
+      rect:
+        serializedVersion: 2
+        x: 7764
+        y: 963
+        width: 446
+        height: 782
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb6b060cafe8e82c0800000000000000
+      internalID: -4427444176038086980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cau\xEA - Sprite Sheet_60"
+      rect:
+        serializedVersion: 2
+        x: 8830
+        y: 969
+        width: 357
+        height: 666
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58bcfe499bf71c640800000000000000
+      internalID: 5098496688204532613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 02fe43b648dd5cb47b792cf0e0c3b916
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "Cau\xEA - Sprite Sheet_0": -3405756779931696094
+      "Cau\xEA - Sprite Sheet_1": 8171486224826807429
+      "Cau\xEA - Sprite Sheet_10": 2608155806557992230
+      "Cau\xEA - Sprite Sheet_11": 6315449041262725988
+      "Cau\xEA - Sprite Sheet_12": 1136040308344620903
+      "Cau\xEA - Sprite Sheet_13": -4368124854713943323
+      "Cau\xEA - Sprite Sheet_14": 2577377529677511581
+      "Cau\xEA - Sprite Sheet_15": 6778605383248997449
+      "Cau\xEA - Sprite Sheet_16": -362227119175174965
+      "Cau\xEA - Sprite Sheet_17": -2537452656141599626
+      "Cau\xEA - Sprite Sheet_18": -1643913024798134368
+      "Cau\xEA - Sprite Sheet_19": 3616526661558635557
+      "Cau\xEA - Sprite Sheet_2": 4669169029581855546
+      "Cau\xEA - Sprite Sheet_20": -6408633238447114201
+      "Cau\xEA - Sprite Sheet_21": 513125735537679356
+      "Cau\xEA - Sprite Sheet_22": -555448617256638116
+      "Cau\xEA - Sprite Sheet_23": -7555982807038130236
+      "Cau\xEA - Sprite Sheet_24": -2437458859217976466
+      "Cau\xEA - Sprite Sheet_25": 1616693382235298803
+      "Cau\xEA - Sprite Sheet_26": -202730881703891069
+      "Cau\xEA - Sprite Sheet_27": 702054150078571865
+      "Cau\xEA - Sprite Sheet_28": -5437111690987601612
+      "Cau\xEA - Sprite Sheet_29": 750819132108699292
+      "Cau\xEA - Sprite Sheet_3": 1482232369098555161
+      "Cau\xEA - Sprite Sheet_30": 7677793481871070780
+      "Cau\xEA - Sprite Sheet_31": -1615394461699089774
+      "Cau\xEA - Sprite Sheet_32": 7279857022117018400
+      "Cau\xEA - Sprite Sheet_33": -6053210232399505026
+      "Cau\xEA - Sprite Sheet_34": 2610015314159976630
+      "Cau\xEA - Sprite Sheet_35": -6158821358706436769
+      "Cau\xEA - Sprite Sheet_36": -6884594513316271738
+      "Cau\xEA - Sprite Sheet_37": 4778806521430417618
+      "Cau\xEA - Sprite Sheet_38": -8018495489096712787
+      "Cau\xEA - Sprite Sheet_39": 5396830686879612455
+      "Cau\xEA - Sprite Sheet_4": -4424805881212889957
+      "Cau\xEA - Sprite Sheet_40": -3751880660896202260
+      "Cau\xEA - Sprite Sheet_41": -7017862709264055817
+      "Cau\xEA - Sprite Sheet_42": -6386759622798205362
+      "Cau\xEA - Sprite Sheet_43": -8723748110258865997
+      "Cau\xEA - Sprite Sheet_44": -4942846858842064169
+      "Cau\xEA - Sprite Sheet_45": 4565324979743284456
+      "Cau\xEA - Sprite Sheet_46": 5084149851584214191
+      "Cau\xEA - Sprite Sheet_47": 3545235857518203892
+      "Cau\xEA - Sprite Sheet_48": -4321186341201538112
+      "Cau\xEA - Sprite Sheet_49": -4448146873895882379
+      "Cau\xEA - Sprite Sheet_5": -4158106841710090136
+      "Cau\xEA - Sprite Sheet_50": 1045538026900680771
+      "Cau\xEA - Sprite Sheet_51": -808726419732076206
+      "Cau\xEA - Sprite Sheet_52": -5401750599093064063
+      "Cau\xEA - Sprite Sheet_53": -8099592388467491138
+      "Cau\xEA - Sprite Sheet_54": 8326337880092363238
+      "Cau\xEA - Sprite Sheet_55": -142318414442589697
+      "Cau\xEA - Sprite Sheet_56": 7787701630861930365
+      "Cau\xEA - Sprite Sheet_57": -541857572989393264
+      "Cau\xEA - Sprite Sheet_58": 3627786431443512490
+      "Cau\xEA - Sprite Sheet_59": -4427444176038086980
+      "Cau\xEA - Sprite Sheet_6": -7332806446440330837
+      "Cau\xEA - Sprite Sheet_60": 5098496688204532613
+      "Cau\xEA - Sprite Sheet_61": 2836048158728215558
+      "Cau\xEA - Sprite Sheet_62": -9129290129300824090
+      "Cau\xEA - Sprite Sheet_63": -247343408165909556
+      "Cau\xEA - Sprite Sheet_64": 7056209676803802061
+      "Cau\xEA - Sprite Sheet_65": 2973656010531274271
+      "Cau\xEA - Sprite Sheet_66": 3513177635246636829
+      "Cau\xEA - Sprite Sheet_67": -1697177642782242079
+      "Cau\xEA - Sprite Sheet_68": -1321068342997257524
+      "Cau\xEA - Sprite Sheet_69": -5584102416253403994
+      "Cau\xEA - Sprite Sheet_7": -519871118006169235
+      "Cau\xEA - Sprite Sheet_70": 5977048443525461490
+      "Cau\xEA - Sprite Sheet_71": 9072594500324632488
+      "Cau\xEA - Sprite Sheet_72": 8893898874515803278
+      "Cau\xEA - Sprite Sheet_73": -172841245374897952
+      "Cau\xEA - Sprite Sheet_74": -982478352696078216
+      "Cau\xEA - Sprite Sheet_75": 8024384728778396361
+      "Cau\xEA - Sprite Sheet_76": -6236873589973281384
+      "Cau\xEA - Sprite Sheet_77": -1917888748
+      "Cau\xEA - Sprite Sheet_8": -4739372644049317705
+      "Cau\xEA - Sprite Sheet_9": 609030296036165740
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
