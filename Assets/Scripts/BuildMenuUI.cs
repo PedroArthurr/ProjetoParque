@@ -12,7 +12,7 @@ public class BuildMenuUI : MonoBehaviour
     [SerializeField] Button buttonPrefab;
     [SerializeField] Transform listRoot;
     [SerializeField] GameObject panel;
-    [SerializeField] KeyCode toggleKey = KeyCode.B;
+    [SerializeField] KeyCode toggleKey = KeyCode.Q;
 
     readonly List<Button> created = new List<Button>();
     readonly Dictionary<Button, BuildRecipe> map = new Dictionary<Button, BuildRecipe>();

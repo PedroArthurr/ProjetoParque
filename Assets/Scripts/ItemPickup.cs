@@ -1,7 +1,4 @@
-// ItemPickup.cs
 using UnityEngine;
-
-public enum ItemType { Plastic, Paper, Glass, Organic, Metal }
 
 public class ItemPickup : MonoBehaviour
 {
@@ -13,8 +10,6 @@ public class ItemPickup : MonoBehaviour
     public int Amount => amount;
     public float Range => pickupRange;
 
-    void OnMouseDown()
-    {
-        PickupManager.Instance?.TryPickup(this);
-    }
+    void OnMouseDown() { PickupManager.Instance?.TryPickup(this); }
 }
+public enum ItemType { Plastic, Paper, Glass, Organic, Metal }

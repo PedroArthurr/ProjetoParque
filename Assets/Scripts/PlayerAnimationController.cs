@@ -2,53 +2,59 @@ using UnityEngine;
 
 public class PlayerAnimationController : MonoBehaviour
 {
-    [SerializeField] Animator animator;
-    [SerializeField] SpriteRenderer spriteRenderer;
-    [SerializeField] Rigidbody2D rb;
-    [SerializeField] CapsuleCollider2D capsule;
-    [SerializeField] PlayerMovement playerMovement;
-    [SerializeField] LayerMask groundLayer;
+    [SerializeField] private Animator animator;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private CapsuleCollider2D capsule;
+    [SerializeField] private PlayerMovement playerMovement;
+    [SerializeField] private PlayerStun playerStun;
+    [SerializeField] private LayerMask groundLayer;
 
-    [SerializeField] float groundCheckDistance = 0.08f;
-    [SerializeField] float groundedStableTime = 0.08f;
+    [SerializeField] private float groundCheckDistance = 0.08f;
+    [SerializeField] private float groundedStableTime = 0.08f;
 
-    [SerializeField] float runOnInput = 0.55f;
-    [SerializeField] float runOffInput = 0.35f;
-    [SerializeField] float minRunTime = 0.18f;
-    [SerializeField] float minIdleTime = 0.18f;
+    [SerializeField] private float runOnInput = 0.55f;
+    [SerializeField] private float runOffInput = 0.35f;
+    [SerializeField] private float minRunTime = 0.18f;
+    [SerializeField] private float minIdleTime = 0.18f;
 
-    [SerializeField] float landingHold = 0.12f;
-    [SerializeField] float minAirTime = 0.03f;
-    [SerializeField] float landYVelMax = -0.02f;
+    [SerializeField] private float landingHold = 0.12f;
+    [SerializeField] private float minAirTime = 0.03f;
+    [SerializeField] private float landYVelMax = -0.02f;
 
-    const string P_IsGrounded = "IsGrounded";
-    const string P_IsRunning = "IsRunning";
-    const string P_YVel = "YVel";
-    const string P_Land = "Land";
+    [SerializeField] private string hurtState = "Hurt";
 
-    ContactFilter2D filter;
-    readonly RaycastHit2D[] hits = new RaycastHit2D[2];
+    private const string P_IsGrounded = "IsGrounded";
+    private const string P_IsRunning = "IsRunning";
+    private const string P_YVel = "YVel";
+    private const string P_Land = "Land";
+    private const string P_Crouch = "Crouch";
+    private const string P_Hurt = "Hurt";
 
-    bool groundedRaw, groundedStable, wasGroundedRaw;
-    bool isRunningState, landingLock;
-    float groundedTimer, runStateTimer, airTimer, landTimer;
+    private ContactFilter2D filter;
+    private readonly RaycastHit2D[] hits = new RaycastHit2D[2];
 
-    void Awake()
+    private bool groundedRaw, groundedStable, wasGroundedRaw;
+    private bool isRunningState, landingLock, subPickup, subStun;
+    private float groundedTimer, runStateTimer, airTimer, landTimer;
+
+    private void Awake()
     {
         if (!rb) rb = GetComponentInParent<Rigidbody2D>();
         if (!capsule) capsule = GetComponentInParent<CapsuleCollider2D>();
         if (!playerMovement) playerMovement = GetComponentInParent<PlayerMovement>();
+        if (!playerStun) playerStun = GetComponentInParent<PlayerStun>();
         filter.useLayerMask = true; filter.layerMask = groundLayer; filter.useTriggers = false;
     }
 
-    bool IsGroundedRaw() => capsule && capsule.Cast(Vector2.down, filter, hits, groundCheckDistance) > 0;
+    private void OnEnable()
+    { TrySubPickup(); TrySubStun(); }
 
-    void SetBool(string n, bool v) { if (animator) animator.SetBool(n, v); }
-    void SetFloat(string n, float v) { if (animator) animator.SetFloat(n, v); }
-    void Trigger(string n) { if (animator) { animator.ResetTrigger(n); animator.SetTrigger(n); } }
-
-    void Update()
+    private void Update()
     {
+        if (!subPickup) TrySubPickup();
+        if (!subStun) TrySubStun();
+
         groundedRaw = IsGroundedRaw();
         groundedTimer = groundedRaw ? groundedStableTime : Mathf.Max(0f, groundedTimer - Time.deltaTime);
         groundedStable = groundedRaw || groundedTimer > 0f;
@@ -64,8 +70,7 @@ public class PlayerAnimationController : MonoBehaviour
 
         if (!groundedRaw)
         {
-            airTimer += Time.deltaTime;
-            landTimer = 0f;
+            airTimer += Time.deltaTime; landTimer = 0f;
             if (landingLock && playerMovement) { playerMovement.UnblockMovement(); landingLock = false; }
         }
         else
@@ -89,9 +94,7 @@ public class PlayerAnimationController : MonoBehaviour
         {
             if (canRun && inAbs >= runOnInput && runStateTimer <= 0f)
             {
-                isRunningState = true;
-                runStateTimer = minRunTime;
-                SetBool(P_IsRunning, true);
+                isRunningState = true; runStateTimer = minRunTime; SetBool(P_IsRunning, true);
             }
             else runStateTimer = Mathf.Max(0f, runStateTimer - Time.deltaTime);
         }
@@ -99,13 +102,67 @@ public class PlayerAnimationController : MonoBehaviour
         {
             if ((!canRun || inAbs <= runOffInput) && runStateTimer <= 0f)
             {
-                isRunningState = false;
-                runStateTimer = minIdleTime;
-                SetBool(P_IsRunning, false);
+                isRunningState = false; runStateTimer = minIdleTime; SetBool(P_IsRunning, false);
             }
             else runStateTimer = Mathf.Max(0f, runStateTimer - Time.deltaTime);
         }
 
         wasGroundedRaw = groundedRaw;
+    }
+
+    private void OnDisable()
+    {
+        if (subPickup && PickupManager.Instance != null) PickupManager.Instance.OnPicked -= OnPicked;
+        subPickup = false;
+        if (subStun && playerStun != null) playerStun.OnStunned -= OnHurt;
+        subStun = false;
+    }
+
+    private void TrySubPickup()
+    {
+        if (subPickup) return;
+        var pm = PickupManager.Instance;
+        if (pm != null) { pm.OnPicked += OnPicked; subPickup = true; }
+    }
+
+    private void TrySubStun()
+    {
+        if (subStun || playerStun == null) return;
+        playerStun.OnStunned += OnHurt; subStun = true;
+    }
+
+    private void OnPicked(ItemType t, int a)
+    {
+        if (animator) { animator.ResetTrigger(P_Crouch); animator.SetTrigger(P_Crouch); }
+    }
+
+    private void OnHurt()
+    {
+        Debug.Log("[Anim] HURT trigger");
+        if (!animator) return;
+        animator.ResetTrigger("Hurt");
+        animator.SetTrigger("Hurt");
+        int hash = Animator.StringToHash("Hurt");
+        if (animator.HasState(0, hash)) animator.CrossFade(hash, 0.05f, 0, 0f);
+    }
+
+    private bool IsGroundedRaw() => capsule && capsule.Cast(Vector2.down, filter, hits, groundCheckDistance) > 0;
+
+    private void SetBool(string n, bool v)
+    { if (animator) animator.SetBool(n, v); }
+
+    private void SetFloat(string n, float v)
+    { if (animator) animator.SetFloat(n, v); }
+
+    private void Trigger(string n)
+    { if (animator) { animator.ResetTrigger(n); animator.SetTrigger(n); } }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (!capsule) return;
+        var b = capsule.bounds;
+        Vector3 from = new Vector3(b.center.x, b.min.y, 0f);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawLine(from, from + Vector3.down * groundCheckDistance);
     }
 }
