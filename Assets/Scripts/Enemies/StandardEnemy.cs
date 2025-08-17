@@ -4,7 +4,6 @@ public class StandardEnemy : MonoBehaviour
 {
     [Header("Refs")]
     [SerializeField] public Rigidbody2D rb;
-
     [SerializeField] public Animator animator;
     [SerializeField] public SpriteRenderer spriteRenderer;
     [SerializeField] public Transform player;
@@ -12,12 +11,10 @@ public class StandardEnemy : MonoBehaviour
 
     [Header("Layers")]
     [SerializeField] public LayerMask groundMask;
-
     [SerializeField] public LayerMask wallMask;
 
     [Header("Patrol")]
     [SerializeField] public float moveSpeed = 2.5f;
-
     [SerializeField] public int direction = -1;
     [SerializeField] public float edgeCheckDistance = 0.28f;
     [SerializeField] public float wallCheckDistance = 0.14f;
@@ -25,29 +22,37 @@ public class StandardEnemy : MonoBehaviour
 
     [Header("Stomp")]
     [SerializeField] public float stompYThreshold = -2f;
-
     public float StompYThreshold => stompYThreshold;
-
     [SerializeField] public float topHitMargin = 0.06f;
     [SerializeField] public float stunDuration = 1.2f;
-    [SerializeField] public float bounceForce = 12f;
+    [SerializeField] public float bounceForce = 10f;
 
     [Header("Player Hurt")]
     [SerializeField] public float playerStunTime = 0.8f;
-
     [SerializeField] public float postHitCooldown = 0.35f;
     [SerializeField] public float postHitImpulseX = 3.5f;
 
     [Header("Flip Control")]
     [SerializeField] public float flipCooldown = 0.3f;
-
     [SerializeField] public float minRelSpeedToFlip = 0.2f;
     [SerializeField] public float stuckFlipTime = 0.6f;
     [SerializeField] public float stuckSpeedEps = 0.02f;
 
+    [Header("Drop Throw")]
+    [SerializeField] float dropSideSpeedMin = 1.5f;
+    [SerializeField] float dropSideSpeedMax = 3.5f;
+    [SerializeField] float dropUpSpeedMin = 4f;
+    [SerializeField] float dropUpSpeedMax = 7f;
+    [SerializeField] float dropTorqueMin = -20f;
+    [SerializeField] float dropTorqueMax = 20f;
+    [SerializeField] float dropGravityScale = 1f;
+    [SerializeField] bool dropBiasAwayFromPlayer = true;
+
+    [Header("VFX")]
+    [SerializeField] GameObject stunIndicator;
+
     [Header("Debug")]
     [SerializeField] public bool debugLogs = false;
-
     [SerializeField] public bool debugGizmos = true;
 
     private bool isStunned;
@@ -64,7 +69,11 @@ public class StandardEnemy : MonoBehaviour
     private bool gizNoGroundAhead, gizWallAhead, gizGrounded;
     private float gizTime;
 
-    private void Awake()
+    public bool IsStunned => isStunned;
+
+    bool executed;
+
+    void Awake()
     {
         if (!rb) rb = GetComponent<Rigidbody2D>();
         if (!spriteRenderer) spriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -77,9 +86,10 @@ public class StandardEnemy : MonoBehaviour
             var p = GameObject.FindGameObjectWithTag("Player");
             if (p) player = p.transform;
         }
+        if (stunIndicator) stunIndicator.SetActive(false);
     }
 
-    private void Update()
+    void Update()
     {
         if (postHitTimer > 0f) postHitTimer -= Time.deltaTime;
         if (flipTimer > 0f) flipTimer -= Time.deltaTime;
@@ -111,9 +121,11 @@ public class StandardEnemy : MonoBehaviour
             }
         }
         else stuckTimer = 0f;
+
+        UpdateStunFX();
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         if (isStunned)
         {
@@ -136,7 +148,7 @@ public class StandardEnemy : MonoBehaviour
         rb.linearVelocity = new Vector2(direction * moveSpeed, rb.linearVelocity.y);
     }
 
-    private void Sense(out bool grounded, out bool noGroundAhead, out bool wallAhead)
+    void Sense(out bool grounded, out bool noGroundAhead, out bool wallAhead)
     {
         grounded = false; noGroundAhead = false; wallAhead = false;
         if (!mainCollider)
@@ -171,17 +183,17 @@ public class StandardEnemy : MonoBehaviour
         gizTime = Time.time;
     }
 
-    private void OnCollisionEnter2D(Collision2D c)
+    void OnCollisionEnter2D(Collision2D c)
     {
         if (c.collider.CompareTag("Player")) ResolvePlayerContact(c, true);
     }
 
-    private void OnCollisionStay2D(Collision2D c)
+    void OnCollisionStay2D(Collision2D c)
     {
         if (c.collider.CompareTag("Player")) ResolvePlayerContact(c, false);
     }
 
-    private void OnCollisionExit2D(Collision2D c)
+    void OnCollisionExit2D(Collision2D c)
     {
         if (blockTurnUntilExit && c.collider == blockCol)
         {
@@ -191,9 +203,9 @@ public class StandardEnemy : MonoBehaviour
         }
     }
 
-    private bool CanHurtNow() => !isStunned && postHitTimer <= 0f;
+    bool CanHurtNow() => !isStunned && postHitTimer <= 0f;
 
-    private void ResolvePlayerContact(Collision2D c, bool isEnter)
+    void ResolvePlayerContact(Collision2D c, bool isEnter)
     {
         var prb = c.collider.attachedRigidbody;
         if (!prb || !mainCollider) return;
@@ -254,7 +266,7 @@ public class StandardEnemy : MonoBehaviour
         ArmExitBlock(c.collider);
     }
 
-    private void FlipAway(int dirToPlayer)
+    void FlipAway(int dirToPlayer)
     {
         if (flipTimer > 0f) return;
         direction = -dirToPlayer;
@@ -265,13 +277,13 @@ public class StandardEnemy : MonoBehaviour
         if (debugLogs) Debug.Log($"[Enemy] FlipAway dir={direction} vx={v.x:F2}");
     }
 
-    private void ArmExitBlock(Collider2D col)
+    void ArmExitBlock(Collider2D col)
     {
         blockTurnUntilExit = true;
         blockCol = col;
     }
 
-    private PlayerStun FindPlayerStunFromCollision(Collision2D c)
+    PlayerStun FindPlayerStunFromCollision(Collision2D c)
     {
         var prb = c.collider.attachedRigidbody;
         if (!prb) return null;
@@ -291,7 +303,14 @@ public class StandardEnemy : MonoBehaviour
         if (prb) prb.linearVelocity = new Vector2(prb.linearVelocity.x, bounceForce);
     }
 
-    private void OnDrawGizmos()
+    void UpdateStunFX()
+    {
+        if (!stunIndicator) return;
+        bool on = isStunned;
+        if (stunIndicator.activeSelf != on) stunIndicator.SetActive(on);
+    }
+
+    void OnDrawGizmos()
     {
         if (!debugGizmos) return;
         var col = mainCollider ? mainCollider : GetComponent<Collider2D>();
@@ -316,5 +335,65 @@ public class StandardEnemy : MonoBehaviour
         Vector2 foot = new Vector2(b.center.x, b.min.y + 0.02f);
         Gizmos.color = g;
         Gizmos.DrawLine(foot, foot + Vector2.down * edgeCheckDistance);
+    }
+
+    public void ExecuteKill(GameObject dropPrefab, Vector2 dropOffset, float destroyDelay)
+    {
+        if (executed) return;
+        executed = true;
+
+        if (stunIndicator) stunIndicator.SetActive(false);
+
+        GameObject drop = null;
+        if (dropPrefab) drop = Instantiate(dropPrefab, (Vector2)transform.position + dropOffset, Quaternion.identity);
+
+        if (animator) { animator.ResetTrigger("Die"); animator.SetTrigger("Die"); }
+        if (rb) rb.linearVelocity = Vector2.zero;
+
+        var cols = GetComponentsInChildren<Collider2D>(true);
+        for (int i = 0; i < cols.Length; i++) cols[i].enabled = false;
+        if (rb) rb.simulated = false;
+
+        if (drop) ThrowDropAwayFromPlayer(drop);
+
+        Destroy(gameObject, destroyDelay);
+    }
+
+    void ThrowDropAwayFromPlayer(GameObject drop)
+    {
+        var drb = drop.GetComponent<Rigidbody2D>();
+        if (!drb) drb = drop.AddComponent<Rigidbody2D>();
+        drb.bodyType = RigidbodyType2D.Dynamic;
+        drb.gravityScale = dropGravityScale;
+
+        float sign = player ? Mathf.Sign(transform.position.x - player.position.x) : (Random.value < 0.5f ? -1f : 1f);
+        float vx = sign * Random.Range(dropSideSpeedMin, dropSideSpeedMax);
+        float vy = Random.Range(dropUpSpeedMin, dropUpSpeedMax);
+        drb.linearVelocity = new Vector2(vx, vy);
+
+        float tq = Random.Range(dropTorqueMin, dropTorqueMax);
+        drb.AddTorque(tq, ForceMode2D.Impulse);
+    }
+
+    void ThrowDrop(GameObject drop)
+    {
+        var drb = drop.GetComponent<Rigidbody2D>();
+        if (!drb) drb = drop.AddComponent<Rigidbody2D>();
+
+        drb.bodyType = RigidbodyType2D.Dynamic;
+        drb.gravityScale = dropGravityScale;
+
+        float sideSign;
+        if (dropBiasAwayFromPlayer && player)
+            sideSign = Mathf.Sign(drop.transform.position.x - player.position.x);
+        else
+            sideSign = Random.value < 0.5f ? -1f : 1f;
+
+        float vx = sideSign * Random.Range(dropSideSpeedMin, dropSideSpeedMax);
+        float vy = Random.Range(dropUpSpeedMin, dropUpSpeedMax);
+        drb.linearVelocity = new Vector2(vx, vy);
+
+        float tq = Random.Range(dropTorqueMin, dropTorqueMax);
+        drb.AddTorque(tq, ForceMode2D.Impulse);
     }
 }

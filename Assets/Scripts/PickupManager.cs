@@ -1,70 +1,36 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 using System;
+using System.Collections;
 
 public class PickupManager : MonoBehaviour
 {
     public static PickupManager Instance { get; private set; }
 
-    [SerializeField] Camera cam;
     [SerializeField] Transform player;
     [SerializeField] string playerTag = "Player";
-    [SerializeField] LayerMask itemLayer = ~0;
-    [SerializeField] float clickPickRadius = 0.25f;
-    [SerializeField] bool blockWhenPointerOverUI = true;
-    [SerializeField] bool debugLogs = true;
+    [SerializeField] UICollectTargetRegistry uiRegistry;
+    [SerializeField] float binsAutoHideDelay = 2f;
 
     public event Action<ItemType, int> OnPicked;
     public event Action<string> OnMessage;
 
+    Transform playerHand;
+    int flyInProgress;
+    float keepVisibleUntil;
+    Coroutine visibilityCo;
+
     void Awake()
     {
-        if (Instance == null) Instance = this; else Destroy(gameObject);
-        if (!cam) cam = Camera.main;
+        if (Instance == null) Instance = this;
+        else { Destroy(gameObject); return; }
+
         if (!player)
         {
             var p = GameObject.FindWithTag(playerTag);
             if (p) player = p.transform;
         }
-    }
-
-    void Update()
-    {
-        if (!Input.GetMouseButtonDown(0)) return;
-        if (blockWhenPointerOverUI && EventSystem.current && EventSystem.current.IsPointerOverGameObject())
-        {
-            if (debugLogs) Debug.Log("[Pickup] Blocked by UI");
-            return;
-        }
-
-        Vector2 mw = MouseWorld();
-        var hits = Physics2D.OverlapPointAll(mw, itemLayer);
-        if (hits.Length == 0) hits = Physics2D.OverlapCircleAll(mw, clickPickRadius, itemLayer);
-
-        ItemPickup best = null;
-        float bestDist = float.MaxValue;
-
-        for (int i = 0; i < hits.Length; i++)
-        {
-            var col = hits[i];
-            var ip = col.GetComponent<ItemPickup>() ?? col.GetComponentInParent<ItemPickup>();
-            float dist = player ? Vector2.Distance(player.position, col.transform.position) : 0f;
-            if (debugLogs)
-            {
-                int layer = col.gameObject.layer;
-                Debug.Log($"[Pickup] Hit '{col.name}' layer={LayerMask.LayerToName(layer)} hasItem={(ip != null)} dist={dist:F2}");
-            }
-            if (!ip) continue;
-            if (dist < bestDist) { best = ip; bestDist = dist; }
-        }
-
-        if (!best)
-        {
-            if (debugLogs) Debug.Log("[Pickup] No ItemPickup under cursor");
-            return;
-        }
-
-        TryPickup(best);
+        if (!uiRegistry) uiRegistry = FindObjectOfType<UICollectTargetRegistry>(true);
+        playerHand = player ? player.Find("HoldItemPoint") : null;
     }
 
     public bool TryPickup(ItemPickup item)
@@ -72,30 +38,73 @@ public class PickupManager : MonoBehaviour
         if (!player || !item) return false;
 
         float d = Vector2.Distance(player.position, item.transform.position);
-        if (d > item.Range)
-        {
-            OnMessage?.Invoke("Too far");
-            if (debugLogs) Debug.Log($"[Pickup] Too far (d={d:F2} > {item.Range:F2})");
-            return false;
-        }
+        if (d > item.Range) { OnMessage?.Invoke("Too far"); return false; }
 
         bool ok = InventoryManager.Instance && InventoryManager.Instance.AddItem(item.Type, item.Amount);
-        if (!ok)
-        {
-            OnMessage?.Invoke("Cannot pickup");
-            if (debugLogs) Debug.Log("[Pickup] Inventory refused");
-            return false;
-        }
+        if (!ok) { OnMessage?.Invoke("Cannot pickup"); return false; }
 
-        if (debugLogs) Debug.Log($"[Pickup] Picked up {item.Amount} of {item.Type}");
+        Sprite icon = null;
+        var sr = item.GetComponentInChildren<SpriteRenderer>();
+        if (sr) icon = sr.sprite;
+
+        ShowBinsHold();
+        StartFly(icon, item.transform.position, item.Type);
+
         OnPicked?.Invoke(item.Type, item.Amount);
         Destroy(item.gameObject);
         return true;
     }
 
-    Vector2 MouseWorld()
+    void ShowBinsHold()
     {
-        Vector3 m = Input.mousePosition; m.z = 10f;
-        return cam ? (Vector2)cam.ScreenToWorldPoint(m) : (Vector2)m;
+        var a = uiRegistry ? uiRegistry.binsAnimator : null;
+        if (!a) return;
+        a.ResetTrigger("Hide");
+        a.SetTrigger("Show");
+        keepVisibleUntil = Mathf.Max(keepVisibleUntil, Time.time + binsAutoHideDelay);
+        EnsureVisibilityLoop();
+    }
+
+    void StartFly(Sprite icon, Vector3 worldStart, ItemType type)
+    {
+        if (!uiRegistry || !uiRegistry.canvas) return;
+        var fly = UIFlyToSlotMB.Instance ?? FindObjectOfType<UIFlyToSlotMB>(true);
+        if (!fly) return;
+
+        var slot = uiRegistry.GetTarget(type);
+        if (!slot) return;
+
+        var bez = uiRegistry ? uiRegistry.GetAuthor(type) : null;
+
+        flyInProgress++;
+
+        fly.Fly(icon, worldStart, playerHand, slot, uiRegistry.canvas,
+                0.4f, 0.3f, 1.50f, .4f, 0.2f,
+                onArrived: () =>
+                {
+                    flyInProgress = Mathf.Max(0, flyInProgress - 1);
+                    keepVisibleUntil = Time.time + binsAutoHideDelay;
+                    EnsureVisibilityLoop();
+                },
+                bezier: bez,
+                spinDeg: 240f,
+                strictBezier: true);
+    }
+
+    void EnsureVisibilityLoop()
+    {
+        if (visibilityCo == null) visibilityCo = StartCoroutine(VisibilityLoop());
+    }
+
+    IEnumerator VisibilityLoop()
+    {
+        while (Time.time < keepVisibleUntil || flyInProgress > 0) yield return null;
+        var a = uiRegistry ? uiRegistry.binsAnimator : null;
+        if (a)
+        {
+            a.ResetTrigger("Show");
+            a.SetTrigger("Hide");
+        }
+        visibilityCo = null;
     }
 }

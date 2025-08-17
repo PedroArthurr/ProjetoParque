@@ -35,7 +35,7 @@ public class PlayerAnimationController : MonoBehaviour
     private readonly RaycastHit2D[] hits = new RaycastHit2D[2];
 
     private bool groundedRaw, groundedStable, wasGroundedRaw;
-    private bool isRunningState, landingLock, subPickup, subStun;
+    private bool isRunningState, landingLock, subStun;
     private float groundedTimer, runStateTimer, airTimer, landTimer;
 
     private void Awake()
@@ -48,11 +48,10 @@ public class PlayerAnimationController : MonoBehaviour
     }
 
     private void OnEnable()
-    { TrySubPickup(); TrySubStun(); }
+    { TrySubStun(); }
 
     private void Update()
     {
-        if (!subPickup) TrySubPickup();
         if (!subStun) TrySubStun();
 
         groundedRaw = IsGroundedRaw();
@@ -112,28 +111,16 @@ public class PlayerAnimationController : MonoBehaviour
 
     private void OnDisable()
     {
-        if (subPickup && PickupManager.Instance != null) PickupManager.Instance.OnPicked -= OnPicked;
-        subPickup = false;
+        
         if (subStun && playerStun != null) playerStun.OnStunned -= OnHurt;
         subStun = false;
     }
 
-    private void TrySubPickup()
-    {
-        if (subPickup) return;
-        var pm = PickupManager.Instance;
-        if (pm != null) { pm.OnPicked += OnPicked; subPickup = true; }
-    }
 
     private void TrySubStun()
     {
         if (subStun || playerStun == null) return;
         playerStun.OnStunned += OnHurt; subStun = true;
-    }
-
-    private void OnPicked(ItemType t, int a)
-    {
-        if (animator) { animator.ResetTrigger(P_Crouch); animator.SetTrigger(P_Crouch); }
     }
 
     private void OnHurt()
@@ -145,6 +132,13 @@ public class PlayerAnimationController : MonoBehaviour
         int hash = Animator.StringToHash("Hurt");
         if (animator.HasState(0, hash)) animator.CrossFade(hash, 0.05f, 0, 0f);
     }
+
+    public void PlayExecute()
+    {
+        const string P_Crouch = "Crouch";
+        if (animator) { animator.ResetTrigger(P_Crouch); animator.SetTrigger(P_Crouch); }
+    }
+
 
     private bool IsGroundedRaw() => capsule && capsule.Cast(Vector2.down, filter, hits, groundCheckDistance) > 0;
 

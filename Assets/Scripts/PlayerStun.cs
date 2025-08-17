@@ -3,9 +3,16 @@ using System;
 
 public class PlayerStun : MonoBehaviour
 {
+    [Header("Refs")]
     [SerializeField] private PlayerMovement movement;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private SpriteRenderer sprite;
+
+    [Header("VFX")]
+    [SerializeField] private GameObject stunVFXRoot;
+    [SerializeField] private ParticleSystem[] playOnStun;
+
+    [Header("Params")]
     [SerializeField] private float defaultStunTime = 0.6f;
     [SerializeField] private float invulnAfterStun = 0.5f;
     [SerializeField] private Vector2 defaultKnockback = new Vector2(8f, 6f);
@@ -22,6 +29,7 @@ public class PlayerStun : MonoBehaviour
     private float stunTimer, flashTimer, reStunTimer;
     private float stunStartTime, plannedStun;
     private Color origColor;
+    private bool vfxActive;
 
     private void Awake()
     {
@@ -29,6 +37,17 @@ public class PlayerStun : MonoBehaviour
         if (!rb) rb = GetComponent<Rigidbody2D>();
         if (!sprite) sprite = GetComponentInChildren<SpriteRenderer>();
         if (sprite) origColor = sprite.color;
+        if (!stunVFXRoot)
+        {
+            var ps = GetComponentInChildren<ParticleSystem>(true);
+            if (ps) stunVFXRoot = ps.gameObject;
+        }
+        SetVFX(false);
+    }
+
+    private void OnEnable()
+    {
+        SetVFX(IsStunned);
     }
 
     private void Update()
@@ -68,8 +87,11 @@ public class PlayerStun : MonoBehaviour
         if (rb) rb.linearVelocity = kb;
 
         if (sprite) { sprite.color = hurtFlashColor; flashTimer = hurtFlashTime; }
-        if (debugLogs) Debug.Log($"[PlayerStun] HURT dur={stunTimer:F2} kb={kb} invulnNext={reStunTimer:F2}");
 
+        SetVFX(true);
+        PlayEnterParticles();
+
+        if (debugLogs) Debug.Log($"[PlayerStun] HURT dur={stunTimer:F2} kb={kb} invulnNext={reStunTimer:F2}");
         OnStunned?.Invoke();
     }
 
@@ -83,6 +105,7 @@ public class PlayerStun : MonoBehaviour
     {
         IsStunned = false;
         movement?.UnblockMovement();
+        SetVFX(false);
         if (debugLogs)
         {
             float elapsed = Time.time - stunStartTime;
@@ -90,14 +113,34 @@ public class PlayerStun : MonoBehaviour
         }
     }
 
-#if UNITY_EDITOR
+    private void SetVFX(bool on)
+    {
+        if (stunVFXRoot && vfxActive != on)
+        {
+            stunVFXRoot.SetActive(on);
+            vfxActive = on;
+        }
+    }
 
+    private void PlayEnterParticles()
+    {
+        if (playOnStun == null) return;
+        for (int i = 0; i < playOnStun.Length; i++)
+        {
+            var ps = playOnStun[i];
+            if (!ps) continue;
+            ps.gameObject.SetActive(true);
+            ps.Clear();
+            ps.Play();
+        }
+    }
+
+#if UNITY_EDITOR
     private void OnDrawGizmosSelected()
     {
         var pos = transform.position + Vector3.up * 1.6f;
         UnityEditor.Handles.color = Color.white;
         UnityEditor.Handles.Label(pos, $"stun:{(IsStunned ? stunTimer : 0f):F2}s  invuln:{Mathf.Max(0f, reStunTimer):F2}s");
     }
-
 #endif
 }

@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class CannedSoda : StandardEnemy
 {
-    [SerializeField] float defaultMoveSpeed = 3f;
-    [SerializeField] int defaultDirection = -1;
-    [SerializeField] float defaultStun = 1.4f;
-    [SerializeField] float defaultBounce = 14f;
-    [SerializeField] float defaultStompThreshold = -1.5f;
+    [SerializeField] private float defaultMoveSpeed = 3f;
+    [SerializeField] private int defaultDirection = -1;
+    [SerializeField] private float defaultStun = 1.4f;
+    [SerializeField] private float defaultBounce = 10f;
+    [SerializeField] private float defaultStompThreshold = -1.5f;
 
-    void Reset()
+    private void Reset()
     {
         moveSpeed = defaultMoveSpeed;
         direction = defaultDirection;

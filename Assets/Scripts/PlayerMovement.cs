@@ -13,12 +13,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float fallMultiplier = 3f;
     [SerializeField] private float coyoteTime = 0.1f;
     [SerializeField] private float jumpBufferTime = 0.1f;
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private float groundRadius = 0.1f;
+
+    [Header("Grounding")]
+    [SerializeField] private CapsuleCollider2D capsule;
+    [SerializeField] private float groundCastDistance = 0.08f;
     [SerializeField] private LayerMask groundLayer;
+
+    [Header("Refs")]
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private bool canMove = true;
     [SerializeField] private PlayerStun stun;
+    [SerializeField] private bool canMove = true;
     [SerializeField] private bool zeroVXWhileStunned = true;
 
     public float InputX { get; private set; }
@@ -30,18 +34,23 @@ public class PlayerMovement : MonoBehaviour
     private bool jumpRequested;
     private bool jumpCut;
 
-    private void Awake()
+    ContactFilter2D _filter;
+    readonly RaycastHit2D[] _hits = new RaycastHit2D[2];
+
+    void Awake()
     {
         if (!rb) rb = GetComponent<Rigidbody2D>();
         if (!stun) stun = GetComponent<PlayerStun>();
+        if (!capsule) capsule = GetComponent<CapsuleCollider2D>();
+        _filter.useLayerMask = true; _filter.layerMask = groundLayer; _filter.useTriggers = false;
     }
 
-    private void Update()
+    void Update()
     {
         bool stunned = stun && stun.IsStunned;
         bool inputAllowed = canMove && !stunned;
 
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
+        isGrounded = IsGroundedRaw();
         horizontalInput = inputAllowed ? Input.GetAxisRaw("Horizontal") : 0f;
         InputX = horizontalInput;
 
@@ -64,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         bool stunned = stun && stun.IsStunned;
         bool inputAllowed = canMove && !stunned;
@@ -117,12 +126,22 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = vel;
     }
 
-    private void OnDrawGizmosSelected()
+    bool IsGroundedRaw()
     {
-        Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
+        if (!capsule) return false;
+        return capsule.Cast(Vector2.down, _filter, _hits, groundCastDistance) > 0;
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        if (!capsule) capsule = GetComponent<CapsuleCollider2D>();
+        if (!capsule) return;
+        var b = capsule.bounds;
+        Vector2 from = new Vector2(b.center.x, b.min.y + 0.01f);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawLine(from, from + Vector2.down * groundCastDistance);
     }
 
     public void BlockMovement() => canMove = false;
-
     public void UnblockMovement() => canMove = true;
 }
