@@ -1813,7 +1813,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -4467,7 +4467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8095805178295420208, guid: eb3f60b952909ba4693f612e23e642b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.9
+      value: -160
       objectReference: {fileID: 0}
     - target: {fileID: 8095805178295420208, guid: eb3f60b952909ba4693f612e23e642b5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4870,6 +4870,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[DROP]Paper-1'
       objectReference: {fileID: 0}
+    - target: {fileID: 3096054987828522695, guid: bf6c2ad29a4825941a88355743f39dba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4366241786415860279, guid: bf6c2ad29a4825941a88355743f39dba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 31.59
@@ -4942,6 +4946,10 @@ PrefabInstance:
     - target: {fileID: 7256607601682387782, guid: eb3f60b952909ba4693f612e23e642b5, type: 3}
       propertyPath: m_Name
       value: '[ENEMY]Plasticon'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256607601682387782, guid: eb3f60b952909ba4693f612e23e642b5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8095805178295420208, guid: eb3f60b952909ba4693f612e23e642b5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5146,6 +5154,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[DROP]Paper-2'
       objectReference: {fileID: 0}
+    - target: {fileID: 470430574211112506, guid: 3ecbf77a63d09f447b896e38da4ffef9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1999353879255971141, guid: 3ecbf77a63d09f447b896e38da4ffef9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23.059893
@@ -5209,6 +5221,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 586707290}
     m_Modifications:
+    - target: {fileID: 6047391602426213032, guid: cc7976f5960b6df4a94da30e5cc421f7, type: 3}
+      propertyPath: m_Mass
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6047391602426213032, guid: cc7976f5960b6df4a94da30e5cc421f7, type: 3}
+      propertyPath: m_GravityScale
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6727089236616315297, guid: cc7976f5960b6df4a94da30e5cc421f7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 189.2
@@ -5280,7 +5300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7863180596786447212, guid: 9eddc6c8d0885964580baedd19a778fe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -177.5
+      value: -37.6
       objectReference: {fileID: 0}
     - target: {fileID: 7863180596786447212, guid: 9eddc6c8d0885964580baedd19a778fe, type: 3}
       propertyPath: m_LocalPosition.y
