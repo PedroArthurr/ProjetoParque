@@ -252,7 +252,7 @@ MonoBehaviour:
   wallMask:
     serializedVersion: 2
     m_Bits: 0
-  moveSpeed: 3
+  moveSpeed: 5
   direction: -1
   edgeCheckDistance: 0.28
   wallCheckDistance: 0.14
@@ -315,7 +315,8 @@ MonoBehaviour:
   playerAnim: {fileID: 0}
   interactKey: 101
   executeRange: 6.8
-  dropPrefab: {fileID: 569408302688135594, guid: b25de9f807615aa4c816356250de44e5, type: 3}
+  dropPrefabs:
+  - {fileID: 569408302688135594, guid: b25de9f807615aa4c816356250de44e5, type: 3}
   dropOffset: {x: 1, y: 1}
   destroyDelay: 0.5
   debugLogs: 1

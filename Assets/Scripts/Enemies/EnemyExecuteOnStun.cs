@@ -8,7 +8,7 @@ public class EnemyExecuteOnStun : MonoBehaviour
     [SerializeField] PlayerAnimationController playerAnim;
     [SerializeField] KeyCode interactKey = KeyCode.E;
     [SerializeField] float executeRange = 1.1f;
-    [SerializeField] GameObject dropPrefab;
+    [SerializeField] GameObject[] dropPrefabs;
     [SerializeField] Vector2 dropOffset = new Vector2(0f, 0.5f);
     [SerializeField] float destroyDelay = 0.5f;
     [SerializeField] bool debugLogs = true;
@@ -37,10 +37,26 @@ public class EnemyExecuteOnStun : MonoBehaviour
             if (d <= executeRange)
             {
                 playerAnim?.PlayExecute();
-                enemy.ExecuteKill(dropPrefab, dropOffset, destroyDelay);
+                GameObject drop = GetRandomDrop();
+                enemy.ExecuteKill(drop, dropOffset, destroyDelay);
             }
             else if (debugLogs) Debug.Log("[Execute] Too far");
         }
+    }
+
+    GameObject GetRandomDrop()
+    {
+        if (dropPrefabs == null || dropPrefabs.Length == 0) return null;
+        int tries = 0;
+        while (tries < 8)
+        {
+            var pick = dropPrefabs[Random.Range(0, dropPrefabs.Length)];
+            if (pick != null) return pick;
+            tries++;
+        }
+        for (int i = 0; i < dropPrefabs.Length; i++)
+            if (dropPrefabs[i] != null) return dropPrefabs[i];
+        return null;
     }
 
     void OnDrawGizmosSelected()

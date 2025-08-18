@@ -89,7 +89,7 @@ public class StandardEnemy : MonoBehaviour
         if (stunIndicator) stunIndicator.SetActive(false);
     }
 
-    void Update()
+    protected virtual void Update()
     {
         if (postHitTimer > 0f) postHitTimer -= Time.deltaTime;
         if (flipTimer > 0f) flipTimer -= Time.deltaTime;
@@ -125,7 +125,7 @@ public class StandardEnemy : MonoBehaviour
         UpdateStunFX();
     }
 
-    void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         if (isStunned)
         {
